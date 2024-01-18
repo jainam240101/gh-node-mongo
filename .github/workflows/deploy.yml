@@ -4,15 +4,13 @@ on:
     branches:
       - master
       - dev
-env:
-  MONGODB_DB_NAME: gh-node
 jobs:
   test:
     env: 
-      MONGODB_CLUSTER_ADDRESS: gh-cluster.ejwk5wx.mongodb.net
-      MONGODB_USERNAME: mongoUser
-      MONGODB_PASSWORD: 4RXddoYmwL7KlMPz
-      MONGODB_DB_NAME: gh-node
+      MONGODB_CLUSTER_ADDRESS: ${{ secrets.MONGODB_CLUSTER_ADDRESS }}
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
+      MONGODB_DB_NAME: ${{ secrets.MONGODB_DB_NAME }}
       PORT: 8080
     runs-on: ubuntu-latest
     steps:
