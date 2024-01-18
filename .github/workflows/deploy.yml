@@ -10,8 +10,8 @@ jobs:
   test:
     env: 
       MONGODB_CLUSTER_ADDRESS: gh-cluster.ejwk5wx.mongodb.net
-      MONGODB_USERNAME: jainam
-      MONGODB_PASSWORD: mongo
+      MONGODB_USERNAME: mongoUser
+      MONGODB_PASSWORD: 4RXddoYmwL7KlMPz
       MONGODB_DB_NAME: gh-node
       PORT: 8080
     runs-on: ubuntu-latest
